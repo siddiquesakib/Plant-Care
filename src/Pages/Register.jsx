@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Leaf } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 import { toast } from "react-toastify";
@@ -8,6 +8,7 @@ import { VscEye, VscEyeClosed } from "react-icons/vsc";
 
 const Register = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ const Register = () => {
       .then((res) => {
         console.log(res);
         toast.success("registered");
+        navigate('/')
       })
       .catch((error) => {
         console.log(error);

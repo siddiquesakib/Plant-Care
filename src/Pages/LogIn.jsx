@@ -1,9 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
+import { toast } from "react-toastify";
 
 const LogIn = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state || "/";
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        console.log(res);
+        toast.success("registered");
+        navigate(from);
+      })
+      .catch((error) => {
+        console.log(error);
+        const errorMessage = error.message;
+        toast(errorMessage);
+      });
+  };
 
   return (
     <div className="min-h-screen bg-[#f7f6f1]">
@@ -17,7 +42,7 @@ const LogIn = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="space-y-6">
+            <form onSubmit={handleLogin} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Email
@@ -55,7 +80,7 @@ const LogIn = () => {
               </div>
 
               <button
-                type="button"
+                type="submit"
                 className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Login
@@ -70,7 +95,7 @@ const LogIn = () => {
                   Register here
                 </Link>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
