@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
+import { VscEye, VscEyeClosed } from "react-icons/vsc";
 
 const LogIn = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#f7f6f1]">
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Login</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              Login Now!
+            </h2>
             <p className="text-gray-600">Welcome back to GreenNest</p>
           </div>
 
@@ -25,16 +30,22 @@ const LogIn = () => {
                 />
               </div>
 
-              <div>
+              <div className="relative">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Password
                 </label>
                 <input
-                  type="password"
+                  type={show ? "text" : "password"}
                   name="password"
                   placeholder="Enter your password"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
+                <span
+                  onClick={() => setShow(!show)}
+                  className="absolute right-[13px] top-[45px] cursor-pointer z-50"
+                >
+                  {show ? <VscEye size={20} /> : <VscEyeClosed size={20} />}
+                </span>
               </div>
 
               <div className="text-right">
