@@ -11,6 +11,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
+    loader: () => fetch("/plants.json"),
   },
   {
     path: "/plants",

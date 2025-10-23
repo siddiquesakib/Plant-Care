@@ -1,8 +1,7 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const PlantsDetailsCard = ({ detail }) => {
-  if (!detail) return null;
-
   const {
     plantName,
     category,
@@ -15,6 +14,10 @@ const PlantsDetailsCard = ({ detail }) => {
     providerName,
   } = detail;
 
+  const handleBookNow = (e) => {
+    e.preventDefault();
+    toast.success("Booking successful");
+  };
   return (
     <div className="bg-gradient-to-b from-[#f8f9f6] to-[#ffffff] min-h-screen pb-16">
       {/* Plant Details Section */}
@@ -51,7 +54,9 @@ const PlantsDetailsCard = ({ detail }) => {
               <span className="text-yellow-500">⭐ {rating}</span>
             </p>
             <p>
-              <span className="font-semibold text-gray-900">Available Stock:</span>{" "}
+              <span className="font-semibold text-gray-900">
+                Available Stock:
+              </span>{" "}
               {availableStock}
             </p>
             <p>
@@ -78,18 +83,15 @@ const PlantsDetailsCard = ({ detail }) => {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form onSubmit={handleBookNow} className="space-y-6">
             {/* Name Field */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-semibold text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Name
               </label>
               <input
                 type="text"
-                id="name"
+                required
                 placeholder="Enter your full name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
               />
@@ -97,15 +99,12 @@ const PlantsDetailsCard = ({ detail }) => {
 
             {/* Email Field */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-semibold text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Email
               </label>
               <input
                 type="email"
-                id="email"
+                required
                 placeholder="Enter your email address"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
               />
