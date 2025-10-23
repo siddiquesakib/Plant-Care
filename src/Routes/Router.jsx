@@ -4,11 +4,22 @@ import HomeLayout from "../Layouts/HomeLayout";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
+import Plants from "../Pages/Plants";
+import plantDetails from "../Pages/plantDetails";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
+  },
+  {
+    path: "/plants",
+    Component: Plants,
+    loader: () => fetch("/plants.json"),
+  },
+  {
+    path: "/plantdetails/:id",
+    Component: plantDetails,
   },
   {
     path: "/auth",
@@ -23,5 +34,9 @@ export const router = createBrowserRouter([
         Component: Register,
       },
     ],
+  },
+  {
+    path: "/*",
+    element: <h2>Error404</h2>,
   },
 ]);
