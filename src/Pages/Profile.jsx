@@ -9,18 +9,19 @@ const Profile = () => {
   const { user } = use(AuthContext);
   console.log(user);
   const [loading, setLoading] = useState(true);
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 800);
-      return () => clearTimeout(timer);
-    }, []);
-    if (loading) {
-      return <Loading />;
-    }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
+      <title>Plant-Care | Profile</title>
       <Navbar />
       <section className="bg-[#f7f6f1] py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

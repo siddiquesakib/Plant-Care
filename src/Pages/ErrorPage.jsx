@@ -6,6 +6,7 @@ import FooterComponent from "../Component/Footer";
 const ErrorPage = () => {
   return (
     <div>
+      <title>Error 404</title>
       <Navbar />
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-320px)] bg-gray-100 text-center px-4">
         <h1 className="text-6xl font-bold text-green-700 mb-4">404</h1>

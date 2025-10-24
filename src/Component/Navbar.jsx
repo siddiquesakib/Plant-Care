@@ -89,16 +89,16 @@ const Navbar = () => {
                 className="mt-3 z-[1000] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
                 <Link to={"/profile"}>
-                  <p className="font-semibold text-gray-700 text-center hover:text-green-600  transition">
+                  <p className="btn btn-sm w-full font-semibold text-gray-700 text-center hover:text-gray-900 transition">
                     {user.displayName || "User"}
                   </p>
                 </Link>
                 <li>
                   <button
                     onClick={handleLogOut}
-                    className="btn btn-sm bg-red-500 text-white hover:bg-red-600 mt-2"
+                    className="btn btn-sm bg-red-500 text-white hover:bg-red-700 mt-2"
                   >
-                    LogOut
+                    Log Out
                   </button>
                 </li>
               </ul>

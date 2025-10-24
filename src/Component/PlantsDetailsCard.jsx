@@ -30,7 +30,6 @@ const PlantsDetailsCard = ({ detail }) => {
             className="rounded-2xl w-full object-cover h-80 md:h-[480px] transition-transform duration-500 hover:scale-105"
           />
         </div>
-
         <div className="md:w-1/2 w-full mt-8 md:mt-0 space-y-4">
           <h1 className="text-4xl font-extrabold text-[#2a7d2e] mb-3 leading-tight">
             {plantName}
@@ -38,7 +37,6 @@ const PlantsDetailsCard = ({ detail }) => {
           <p className="text-gray-700 text-base leading-relaxed mb-5">
             {description}
           </p>
-
           <div className="space-y-2 text-gray-800">
             <p>
               <span className="font-semibold text-gray-900">Category:</span>{" "}
@@ -55,7 +53,7 @@ const PlantsDetailsCard = ({ detail }) => {
             <p>
               <span className="font-semibold text-gray-900">
                 Available Stock:
-              </span>{" "}
+              </span>
               {availableStock}
             </p>
             <p>
@@ -69,7 +67,6 @@ const PlantsDetailsCard = ({ detail }) => {
           </div>
         </div>
       </div>
-
       <div className="mt-20 max-w-2xl mx-auto p-6 md:p-10">
         <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border-t-4 border-[#2a7d2e]">
           <div className="text-center mb-8">
@@ -80,7 +77,6 @@ const PlantsDetailsCard = ({ detail }) => {
               Get personalized advice on caring for your {plantName}.
             </p>
           </div>
-
           <form onSubmit={handleBookNow} className="space-y-6">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">

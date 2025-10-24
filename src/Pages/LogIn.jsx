@@ -17,18 +17,18 @@ const LogIn = () => {
   const from = location.state || "/";
 
   const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 800);
-  
-      return () => clearTimeout(timer);
-    }, []);
-  
-    if (loading) {
-      return <Loading />;
-    }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -62,6 +62,7 @@ const LogIn = () => {
 
   return (
     <div className="min-h-screen bg-[#f7f6f1]">
+      <title>Plant-Care | Login</title>
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
           <div className="text-center mb-8">

@@ -26,6 +26,7 @@ const HomeLayout = () => {
 
   return (
     <div>
+      <title>Plant-Care | Home</title>
       <Navbar></Navbar>
       <HeroSection />
       <div className="bg-[#f7f6f1] ">
