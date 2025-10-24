@@ -6,6 +6,7 @@ import Register from "../Pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import Plants from "../Pages/Plants";
 import PlantDetails from "../Pages/plantDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <h2>Error404</h2>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);

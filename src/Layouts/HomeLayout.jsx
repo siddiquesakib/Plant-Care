@@ -45,7 +45,7 @@ const HomeLayout = () => {
           </div>
           <Team />
           <div className="flex justify-between pt-22">
-            <h1 className="text-4xl  text-start ">Clients Review</h1>
+            <h1 className="text-4xl  text-start ">What Our Customers Say</h1>
           </div>
           <Review />
         </div>
