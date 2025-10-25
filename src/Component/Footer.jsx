@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
-import { FaFacebook, FaInstagram, FaPinterest } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaPinterest,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function FooterComponent() {
   const navlink = (
@@ -12,7 +18,7 @@ function FooterComponent() {
         <Link to={"/plants"}>Plants</Link>
       </li>
       <li className="hover:text-white">
-        <Link to={"/#"}>About</Link>
+        <Link to={"/about"}>About</Link>
       </li>
       <li className="hover:text-white">
         <Link to={"/auth/login"}>Login</Link>
@@ -25,18 +31,48 @@ function FooterComponent() {
   const social = (
     <>
       <li className="hover:text-white">
-        <Link className="flex gap-1.5" to={"/"}>
-          <FaInstagram size={20} /> Instagram
+        <Link
+          className="flex gap-1.5"
+          target="_blank"
+          to={"https://www.instagram.com/"}
+        >
+          <FaInstagram size={18} /> Instagram
         </Link>
       </li>
       <li className="hover:text-white">
-        <Link className="flex gap-1.5" to={"/plants"}>
-          <FaFacebook size={20} /> Facebook
+        <Link
+          className="flex gap-1.5"
+          target="_blank"
+          to={"https://www.facebook.com/"}
+        >
+          <FaFacebook size={18} /> Facebook
         </Link>
       </li>
       <li className="hover:text-white">
-        <Link className="flex gap-1.5" to={"./profile"}>
-          <FaPinterest size={20} /> Pinterest
+        <Link
+          className="flex gap-1.5"
+          target="_blank"
+          to={"https://www.pinterest.com/"}
+        >
+          <FaPinterest size={18} /> Pinterest
+        </Link>
+      </li>
+      <li className="hover:text-white">
+        <Link
+          className="flex gap-1.5"
+          target="_blank"
+          to={"https://www.pinterest.com/"}
+        >
+          <FaYoutube size={18} /> Youtube
+        </Link>
+      </li>
+      <li className="hover:text-white">
+        <Link
+          className="flex gap-1.5"
+          target="_blank"
+          to={"https://www.pinterest.com/"}
+        >
+          <FaXTwitter size={18} /> Twitter
         </Link>
       </li>
     </>

@@ -17,7 +17,6 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const photo = e.target.photo.value;
-    // console.log(email, password, name);
 
     const passCheck = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
     if (!passCheck.test(password)) {
@@ -35,10 +34,10 @@ const Register = () => {
         toast.success("Registration successful!");
         navigate(from);
       })
-      .catch((error) => {
-        const errorMessage = error.message;
+      .catch((err) => {
+        const errorMessage = err.message;
         toast.error(errorMessage);
-        console.log(error);
+        console.log(err);
       });
   };
 
@@ -78,13 +77,12 @@ const Register = () => {
               Register Now!
             </h2>
             <p className="text-gray-600">
-              Join GreenNest and start your plant journey
+              Join Plant Care and start your plant journey
             </p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#2a7d2e]">
             <form onSubmit={handleRegister} className="space-y-6">
-              {/* Name */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Name
@@ -97,8 +95,6 @@ const Register = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
               </div>
-
-              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Email
@@ -111,8 +107,6 @@ const Register = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
               </div>
-
-              {/* Photo URL */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Photo URL
@@ -125,8 +119,6 @@ const Register = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
               </div>
-
-              {/* Password */}
               <div className="relative">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Password
@@ -163,8 +155,6 @@ const Register = () => {
                   </Link>
                 </label>
               </div>
-
-              {/* Google */}
               <button
                 onClick={handleGoogle}
                 className="btn bg-white w-full text-black border-[#e5e5e5]"

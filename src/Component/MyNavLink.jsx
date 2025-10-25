@@ -1,4 +1,3 @@
-// src/components/MyNavLink.jsx
 import { NavLink } from "react-router";
 
 export default function MyNavLink({ to, children }) {

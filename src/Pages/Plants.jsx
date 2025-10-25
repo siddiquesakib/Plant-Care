@@ -7,9 +7,6 @@ import Loading from "./Loading";
 
 const Plants = () => {
   const data = useLoaderData();
-  // console.log(data);
-
-
   const [loading, setLoading] = useState(true);
   
     useEffect(() => {
@@ -23,7 +20,6 @@ const Plants = () => {
     if (loading) {
       return <Loading />;
     }
-
 
   return (
     <div>

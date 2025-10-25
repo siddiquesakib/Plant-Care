@@ -37,7 +37,6 @@ const LogIn = () => {
         navigate(from);
       })
       .catch((error) => {
-        console.log(error);
         const errorMessage = error.message;
         toast.error(errorMessage);
       });
@@ -52,7 +51,6 @@ const LogIn = () => {
       .catch((error) => {
         const errorMessage = error.message;
         toast.error(errorMessage);
-        console.log(errorMessage);
       });
   };
 
@@ -65,7 +63,7 @@ const LogIn = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Login Now!
             </h2>
-            <p className="text-gray-600">Welcome back to GreenNest</p>
+            <p className="text-gray-600">Welcome back to Plant Care</p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#2a7d2e]">
@@ -109,8 +107,6 @@ const LogIn = () => {
                   Forget Password?
                 </Link>
               </div>
-
-              {/* Google */}
               <button
                 onClick={handleGoogle}
                 className="btn bg-white w-full text-black border-[#e5e5e5]"

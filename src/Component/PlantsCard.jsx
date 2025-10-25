@@ -4,7 +4,6 @@ import { Link } from "react-router";
 
 const PlantsCard = ({ plant }) => {
   const { plantId, image, plantName, price, rating } = plant;
-  console.log(plant);
   return (
     <div>
       <title>Plant-Care | All Plants</title>

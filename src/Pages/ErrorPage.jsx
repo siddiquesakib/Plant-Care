@@ -8,7 +8,7 @@ const ErrorPage = () => {
     <div>
       <title>Error 404</title>
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-320px)] bg-gray-100 text-center px-4">
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-320px)] bg-[#f7f6f1] text-center px-4">
         <h1 className="text-6xl font-bold text-green-700 mb-4">404</h1>
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">
           Page Not Found
@@ -18,7 +18,7 @@ const ErrorPage = () => {
         </p>
         <Link
           to="/"
-          className="bg-green-700 text-white px-5 py-2 rounded-md hover:bg-green-800 transition"
+          className="cursor-pointer bg-[#2a7d2e] text-white px-4 py-2 rounded-lg hover:bg-[#222e1f] transition-colors duration-900 text-center"
         >
           Go Home
         </Link>

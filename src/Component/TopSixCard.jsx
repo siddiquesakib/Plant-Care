@@ -23,7 +23,7 @@ const TopSixCard = ({ loadData }) => {
             <h2 className="font-semibold text-lg">{plant.plantName}</h2>
             <div className="flex justify-between items-center">
               <p className="text-black font-semibold">${plant.price}</p>
-              <p className="text-black flex justify-center items-center gap-1">
+              <p className="text-black flex items-center  md:gap-1 align-middle leading-none"> 
                 <IoIosStarOutline /> {plant.rating}
               </p>
             </div>

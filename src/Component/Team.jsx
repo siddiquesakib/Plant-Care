@@ -7,7 +7,7 @@ const Team = () => {
     fetch("/team.json")
       .then((res) => res.json())
       .then((data) => setExperts(data))
-      .catch((err) => console.error("Error loading experts:", err));
+      .catch((err) => console.error(err));
   }, []);
 
   return (

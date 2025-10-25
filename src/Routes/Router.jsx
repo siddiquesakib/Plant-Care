@@ -10,6 +10,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "../Context/PrivetRoute";
 import Profile from "../Pages/Profile";
 import Home from "../Pages/Home";
+import About from "../Pages/About";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
     path: "/plants",
     Component: Plants,
     loader: () => fetch("/plants.json"),
+  },
+  {
+    path: "/about",
+    Component: About,
   },
   {
     path: "/plant-details/:id",

@@ -20,9 +20,10 @@ const PlantsDetailsCard = ({ detail }) => {
     toast.success("Booking successful");
     e.target.reset();
   };
+
   return (
     <div className="bg-gradient-to-b from-[#f8f9f6] to-[#ffffff] min-h-screen pb-16">
-      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row items-center md:items-start md:gap-10 p-6 md:p-12 mt-10">
+      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row items-center md:items-start md:gap-10 mx-2 p-6 md:p-12 mt-10">
         <div className="md:w-1/2 w-full">
           <img
             src={image}

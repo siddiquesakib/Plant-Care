@@ -29,10 +29,10 @@ const HomeLayout = () => {
       <title>Plant-Care | Home</title>
       <Navbar></Navbar>
       <HeroSection />
-      <div className="bg-[#f7f6f1] ">
+      <div className="bg-[#f7f6f1]">
         <div className="max-w-11/12 mx-auto">
           <div className="flex justify-between pt-25">
-            <h1 className="text-4xl  text-start ">Top Rated Indoor Plants</h1>
+            <h1 className="text-4xl  text-start">Top Rated Indoor Plants</h1>
             <div className="relative flex hover:underline group">
               <Link to="/plants" className="text-gray-700">
                 All Plants
@@ -40,7 +40,7 @@ const HomeLayout = () => {
 
               <span className="transform transition-transform duration-500 ease-out group-hover:translate-x-[4px] group-hover:-translate-y-[4px] group-hover:scale-105 preserve-3d">
                 <IoIosArrowRoundForward
-                  className="absolute -rotate-45"
+                  className="hidden md:block absolute md:top-0 -rotate-45"
                   size={22}
                 />
               </span>

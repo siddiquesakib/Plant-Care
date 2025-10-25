@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 
 const Profile = () => {
   const { user, updateUser, setUser } = use(AuthContext);
-  console.log(user);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -49,7 +48,6 @@ const Profile = () => {
       photoURL: formData.photoURL,
     })
       .then(() => {
-        // Update the local user state
         setUser({
           ...user,
           displayName: formData.displayName,
@@ -58,9 +56,8 @@ const Profile = () => {
         toast.success("Profile updated successfully!");
         setShowModal(false);
       })
-      .catch((error) => {
-        console.error(error);
-        toast.error("Failed to update profile. Please try again.");
+      .catch((err) => {
+        toast.error("Failed to update profile. Please try again.", err);
       });
   };
 
@@ -78,7 +75,6 @@ const Profile = () => {
       <Navbar />
       <section className="bg-[#f7f6f1] py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          {/* Title */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">
               My Profile
@@ -87,20 +83,15 @@ const Profile = () => {
               View your personal information
             </p>
           </div>
-
-          {/* Profile Card */}
           <div className="bg-white shadow-2xl rounded-3xl p-8 md:p-12 hover:shadow-green-300 transition-shadow duration-500">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              {/* Profile Image */}
               <div className="">
                 <img
                   src={user?.photoURL || icon}
                   alt="Profile Avatar"
                   className="w-40 h-40 object-cover rounded-2xl border-4 shadow-lg"
                 />
-              </div>
-
-    
+              </div>{" "}
               <div className="flex-1 w-full ">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   {user.displayName || "No Name Provided"}
@@ -114,8 +105,6 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-
-            {/* Edit Button */}
             <div className="mt-12 text-center">
               <button
                 onClick={() => setShowModal(true)}
@@ -127,12 +116,9 @@ const Profile = () => {
           </div>
         </div>
       </section>
-
-      {/* Update Profile Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-md flex items-center justify-center z-50 px-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
-            {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl"
@@ -140,14 +126,10 @@ const Profile = () => {
               ×
             </button>
 
-            {/* Modal Header */}
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Update Profile
             </h3>
-
-            {/* Update Form */}
             <form onSubmit={handleUpdateProfile} className="space-y-4">
-              {/* Name Input */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name
@@ -162,8 +144,6 @@ const Profile = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
               </div>
-
-              {/* Photo URL Input */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Photo URL
@@ -177,8 +157,6 @@ const Profile = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
                 />
               </div>
-
-              {/* Buttons */}
               <div className="flex gap-3 pt-4">
                 <button
                   type="button"
@@ -198,7 +176,6 @@ const Profile = () => {
           </div>
         </div>
       )}
-
       <FooterComponent />
     </>
   );

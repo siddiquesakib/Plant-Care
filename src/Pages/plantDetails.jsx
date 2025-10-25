@@ -7,8 +7,6 @@ import PlantsDetailsCard from "../Component/PlantsDetailsCard";
 const PlantDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
-  //   console.log(data);
-
   const [detail, setDetail] = useState(null);
 
   useEffect(() => {

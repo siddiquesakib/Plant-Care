@@ -16,7 +16,6 @@ const ReviewCarousel = () => {
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f5f5f5] relative">
-      {/* 🔹 Navigation Buttons */}
       <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10">
         <button className="swiper-button-prev !text-green-700 !w-10 !h-10 !bg-white !rounded-full shadow-md"></button>
       </div>
@@ -34,7 +33,7 @@ const ReviewCarousel = () => {
         }}
         pagination={{ clickable: true }}
         breakpoints={{
-          0: { slidesPerView: 1 }, // ✅ Mobile
+          0: { slidesPerView: 1 },
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },

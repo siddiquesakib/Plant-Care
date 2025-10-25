@@ -12,7 +12,7 @@ const HeroSection = () => {
   const slides = [
     {
       img: "https://images.pexels.com/photos/4503261/pexels-photo-4503261.jpeg",
-      title: "Welcome to GreenNest",
+      title: "Welcome to Plant Care",
       subtitle: "Discover the beauty of nature at home",
     },
     {
