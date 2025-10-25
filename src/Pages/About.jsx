@@ -20,8 +20,7 @@ const About = () => {
 
   return (
     <>
-      {" "}
-      <Navbar />
+      <title>Plant Care | About</title> <Navbar />
       <div className="bg-[#f7f6f1] min-h-screen">
         <section className=" py-20">
           <div className="max-w-6xl mx-auto px-4 text-center">

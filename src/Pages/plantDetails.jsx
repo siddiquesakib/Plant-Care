@@ -14,6 +14,12 @@ const PlantDetails = () => {
     setDetail(plantDetails);
   }, [data, id]);
 
+  useEffect(() => {
+    if (detail) {
+      document.title = `${detail.plantName} | Plant Care`;
+    }
+  }, [detail]);
+
   return (
     <div>
       <Navbar />
