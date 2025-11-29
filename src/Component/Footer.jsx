@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaPinterest,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
 
 function FooterComponent() {
   const navlink = (
@@ -36,7 +32,7 @@ function FooterComponent() {
           target="_blank"
           to={"https://www.instagram.com/"}
         >
-          <FaInstagram size={18} /> Instagram
+          <AiFillInstagram size={18} /> Instagram
         </Link>
       </li>
       <li className="hover:text-white">
@@ -52,26 +48,22 @@ function FooterComponent() {
         <Link
           className="flex gap-1.5"
           target="_blank"
-          to={"https://www.pinterest.com/"}
+          to={"https://github.com/siddiquesakib/"}
         >
-          <FaPinterest size={18} /> Pinterest
+          <FaGithub size={18} /> Github
         </Link>
       </li>
       <li className="hover:text-white">
         <Link
           className="flex gap-1.5"
           target="_blank"
-          to={"https://www.pinterest.com/"}
+          to={"https://www.linkedin.com/in/mohammad-siddique-sakib/"}
         >
-          <FaYoutube size={18} /> Youtube
+          <FaLinkedin size={18} /> Linkedin
         </Link>
       </li>
       <li className="hover:text-white">
-        <Link
-          className="flex gap-1.5"
-          target="_blank"
-          to={"https://www.pinterest.com/"}
-        >
+        <Link className="flex gap-1.5" target="_blank" to={"https://x.com/"}>
           <FaXTwitter size={18} /> Twitter
         </Link>
       </li>
@@ -84,7 +76,7 @@ function FooterComponent() {
         <div className="text-gray-400 flex flex-col items-start gap-3">
           <Link
             to="/"
-            className="text-3xl text-white font-bold hover:scale-105 transition-transform"
+            className="text-3xl font-bold bg-linear-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
             Plant Care
           </Link>
