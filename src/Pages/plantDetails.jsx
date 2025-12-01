@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 import PlantsDetailsCard from "../Component/PlantsDetailsCard";
+import TopCard from "../Component/TopCard";
 
 const PlantDetails = () => {
   const data = useLoaderData();
@@ -25,11 +26,12 @@ const PlantDetails = () => {
       <Navbar />
       <div className="bg-linear-to-b from-green-50/50 via-white to-emerald-50/30 py-15 min-h-screen">
         {detail ? (
-          <PlantsDetailsCard detail={detail} />
+          <PlantsDetailsCard detail={detail} allPlants={data} />
         ) : (
           <p>Loading plant details...</p>
         )}
       </div>
+
       <Footer />
     </div>
   );

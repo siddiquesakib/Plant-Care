@@ -2,8 +2,10 @@ import React from "react";
 import { IoIosStarOutline } from "react-icons/io";
 import { Link } from "react-router";
 
-const TopCard = ({ loadData }) => {
-  const firstSix = loadData.filter((plant) => plant.rating >= 4.5).slice(0, 8);
+const TopCard = ({ loadData = [], limit = 8 }) => {
+  const firstSix = loadData
+    .filter((plant) => plant.rating >= 4.5)
+    .slice(0, limit);
 
   return (
     <div className="container mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">

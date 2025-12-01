@@ -76,7 +76,7 @@ const HomeLayout = () => {
           </div>
           <FAQ />
 
-          <div className="flex justify-between pt-22">
+          <div className="flex justify-between pt-2">
             <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent mb-8">
               What Our Customers Say
             </h1>

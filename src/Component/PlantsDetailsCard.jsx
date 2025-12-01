@@ -1,7 +1,8 @@
 import React from "react";
 import { toast } from "react-toastify";
+import TopCard from "./TopCard";
 
-const PlantsDetailsCard = ({ detail }) => {
+const PlantsDetailsCard = ({ detail, allPlants }) => {
   const {
     plantName,
     category,
@@ -68,18 +69,24 @@ const PlantsDetailsCard = ({ detail }) => {
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl text-center border border-green-200">
                   <p className="text-gray-600 text-sm mb-1">Stock</p>
-                  <p className="text-2xl font-bold text-gray-900">{availableStock}</p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {availableStock}
+                  </p>
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl text-center border border-green-200">
                   <p className="text-gray-600 text-sm mb-1">Height</p>
-                  <p className="text-lg font-bold text-gray-900">{plantHeight}</p>
+                  <p className="text-lg font-bold text-gray-900">
+                    {plantHeight}
+                  </p>
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-xl border-l-4 border-green-500 shadow-sm">
                   <p className="text-gray-600 text-sm mb-1">🪴 Pot Size</p>
-                  <p className="text-gray-900 font-semibold">{nurseryPotSize}</p>
+                  <p className="text-gray-900 font-semibold">
+                    {nurseryPotSize}
+                  </p>
                 </div>
                 <div className="bg-white p-4 rounded-xl border-l-4 border-purple-500 shadow-sm">
                   <p className="text-gray-600 text-sm mb-1">👤 Provider</p>
@@ -89,7 +96,9 @@ const PlantsDetailsCard = ({ detail }) => {
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-xl border border-green-200">
                 <p className="text-gray-600 text-sm mb-2">🐾 Pet & Baby Safe</p>
-                <p className="text-gray-800 text-sm leading-relaxed">{petBabySafe}</p>
+                <p className="text-gray-800 text-sm leading-relaxed">
+                  {petBabySafe}
+                </p>
               </div>
             </div>
           </div>
@@ -128,6 +137,13 @@ const PlantsDetailsCard = ({ detail }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto mt-16 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent mb-4">
+          You might also love
+        </h1>
+        <TopCard loadData={allPlants} limit={4}></TopCard>
       </div>
 
       {/* Booking Form */}
