@@ -10,6 +10,7 @@ import Profile from "../Pages/Profile";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import PlantDetails from "../Pages/PlantDetails";
+import FAQPage from "../Pages/FAQPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ export const router = createBrowserRouter([
     path: "/about",
     Component: About,
   },
+  {
+    path: "/faq",
+    Component: FAQPage,
+  },
+
   {
     path: "/plant-details/:id",
     element: <PlantDetails />,

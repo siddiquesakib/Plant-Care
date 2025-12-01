@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Navbar from "../Component/Navbar";
 import FooterComponent from "../Component/Footer";
+import { toast } from "react-toastify";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -107,7 +108,7 @@ const About = () => {
               Stay updated with tips, new arrivals, and plant care advice by
               subscribing to our newsletter.
             </p>
-            <button className="cursor-pointer bg-linear-to-r from-green-600 to-emerald-500 text-white px-10 py-4 rounded-xl hover:from-green-700 hover:to-emerald-600 transition-all duration-300 text-center font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <button onClick={()=> toast.success('Thanks for your Subscribe')} className="cursor-pointer bg-linear-to-r from-green-600 to-emerald-500 text-white px-10 py-4 rounded-xl hover:from-green-700 hover:to-emerald-600 transition-all duration-300 text-center font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
               Subscribe Now
             </button>
           </div>

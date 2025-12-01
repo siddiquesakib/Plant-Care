@@ -9,7 +9,7 @@ import Tips from "../Component/Tips";
 import Team from "../Component/Team";
 import Review from "../Component/Review";
 import Loading from "../Pages/Loading";
-import FAQ from "../Pages/FAQ";
+import FAQ from "../Component/FAQ";
 
 const HomeLayout = () => {
   const loadData = useLoaderData();

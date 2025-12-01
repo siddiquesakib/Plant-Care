@@ -37,45 +37,49 @@ export default function FAQ() {
   };
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
-              >
-                <span className="text-lg font-semibold text-gray-900 pr-4">
-                  {faq.question}
-                </span>
-                <div className="flex-shrink-0">
-                  {openIndex === index ? (
-                    <ChevronUp className="w-6 h-6 text-green-600" />
-                  ) : (
-                    <ChevronDown className="w-6 h-6 text-gray-400" />
-                  )}
-                </div>
-              </button>
-
+    <>
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100"
               >
-                <div className="px-6 pb-5 pt-2">
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+                >
+                  <span className="text-lg font-semibold text-gray-900 pr-4">
+                    {faq.question}
+                  </span>
+                  <div className="flex-shrink-0">
+                    {openIndex === index ? (
+                      <ChevronUp className="w-6 h-6 text-green-600" />
+                    ) : (
+                      <ChevronDown className="w-6 h-6 text-gray-400" />
+                    )}
+                  </div>
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openIndex === index
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-6 pb-5 pt-2">
+                    <p className="text-gray-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
