@@ -9,7 +9,7 @@ import Tips from "../Component/Tips";
 import Team from "../Component/Team";
 import Review from "../Component/Review";
 import Loading from "../Pages/Loading";
-import FAQ from "../Component/FAQ";
+import FAQ from "../Pages/FAQ";
 
 const HomeLayout = () => {
   const loadData = useLoaderData();
@@ -77,7 +77,7 @@ const HomeLayout = () => {
           <FAQ />
 
           <div className="flex justify-between pt-2">
-            <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
               What Our Customers Say
             </h1>
           </div>

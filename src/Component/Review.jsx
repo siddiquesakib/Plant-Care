@@ -15,7 +15,7 @@ const ReviewCarousel = () => {
   }, []);
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-green-50/30 via-white to-green-50/50 relative rounded-2xl my-6">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-green-50/30 via-white to-green-50/50 relative rounded-2xl mb-14">
       <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10">
         <button className="swiper-button-prev !text-green-700 !w-12 !h-12 !bg-white !rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all"></button>
       </div>
@@ -41,7 +41,7 @@ const ReviewCarousel = () => {
       >
         {reviews.map((review) => (
           <SwiperSlide key={review.id}>
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-green-100 border border-gray-100">
+            <div className="bg-white rounded-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 border border-gray-100">
               <div className="relative">
                 <img
                   src={review.img}
