@@ -10,6 +10,7 @@ import Team from "../Component/Team";
 import Review from "../Component/Review";
 import Loading from "../Pages/Loading";
 import FAQ from "../Component/FAQ";
+import Video from "../Component/Video";
 
 const HomeLayout = () => {
   const loadData = useLoaderData();
@@ -62,6 +63,8 @@ const HomeLayout = () => {
             </h1>
           </div>
           <Team />
+
+          <Video/>
 
           <div className="flex justify-between pt-25">
             <div className=" ">
