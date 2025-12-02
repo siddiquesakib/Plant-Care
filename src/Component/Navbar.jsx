@@ -151,13 +151,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/auth/login"
-                className="border-2 border-green-600 text-green-600 cursor-pointer px-5 py-2 rounded-xl hover:bg-green-600 hover:text-white text-center font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
+                className="border-2 border-green-600 text-green-600 cursor-pointer px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl hover:bg-green-600 hover:text-white text-center font-semibold transition-all duration-300 shadow-sm hover:shadow-md text-sm md:text-base"
               >
                 Login
               </Link>
               <Link
                 to="/auth/register"
-                className="bg-linear-to-r from-green-600 to-emerald-500 text-white cursor-pointer px-5 py-2 rounded-xl hover:from-green-700 hover:to-emerald-600 text-center font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                className="bg-linear-to-r from-green-600 to-emerald-500 text-white cursor-pointer px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl hover:from-green-700 hover:to-emerald-600 text-center font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-base"
               >
                 Register
               </Link>

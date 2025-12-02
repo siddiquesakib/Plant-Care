@@ -19,15 +19,25 @@ const HeroSection = () => {
     {
       img: "https://images.pexels.com/photos/4503261/pexels-photo-4503261.jpeg",
       title: "Welcome to Plant Care",
-      subtitle: "Discover the beauty of nature at home",
+      subtitle: "A Beginner's Guide to Happy Plants",
     },
     {
       img: "https://images.pexels.com/photos/4503268/pexels-photo-4503268.jpeg",
-      title: "Bring Nature Indoors",
-      subtitle: "Create your own little green paradise",
+      title: "Your Home Oasis",
+      subtitle: "Easy Steps to Indoor Gardening",
+    },
+    {
+      img: "https://images.pexels.com/photos/15682913/pexels-photo-15682913.jpeg",
+      title: "Grow Your Peace",
+      subtitle: "The Joy of Potted Plants",
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1747132588806-7d981c4b62fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871",
+      title: "Nurture Your Green Friends",
+      subtitle: "Tips for Vibrant, Healthy Growth",
+    },
+    {
+      img: "https://images.pexels.com/photos/6511166/pexels-photo-6511166.jpeg",
       title: "Care. Grow. Thrive",
       subtitle: "Because every leaf deserves love",
     },
@@ -48,7 +58,7 @@ const HeroSection = () => {
     >
       {slides.map((slide, id) => (
         <SwiperSlide key={id}>
-          <div className="relative w-full h-[600px] group">
+          <div className="relative w-full h-[500px] group">
             <img
               src={slide.img}
               alt={slide.title}
